@@ -19,6 +19,6 @@ print(moon)
 print(moon["fav_food"])
 moon["starving"] = True
 print(moon)
-#어떤 변수는 list,tuple,dict 안에 설정 가능
+#어떤 변수든 list,tuple,dict 안에 설정 가능
 anything = ("tada",True,7,None,False,"hey")
 print(anything)

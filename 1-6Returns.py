@@ -18,5 +18,3 @@ print("p_result =",p_result,"r_result =", r_result)
 #print(p_plus)가 None으로 출력됨
 #program은 print를 신경쓰지 X, print로 나타낸 값을 쓸 수 X
 # -> print(~~) = None
-
-

@@ -23,3 +23,5 @@ def remove_x(a,b):
 	return a.remove(b)	
 remove_x(days, "Mon")
 print(days)
+
+#https://replit.com/@mooonzero/Day-Two-Blueprint#main.py

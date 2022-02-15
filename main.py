@@ -1,22 +1,26 @@
-#1-6 Retunrs
-#return의 역할 : 함수의 결과를 return, 함수 종료
+#1-7 Keyworded Arguments
+def plus(a, b):
+  return a - b
 
-def p_plus(a, b):
-  print(a + b)
+result = plus(2, 4)
+  #위치로 인자를 확인하는 positional argument
 
-#return으로 이미 함수가 종료 되었으므로 print()는 실행되지 X
-def r_plus(a, b):
-  return a + b
-  print("This sentence won't be printed out.")
+k_result = plus(b=10,a=15)
+print("result=",result,", k_result = ",k_result)
+  # keyword argument는 argument의 이름으로 쌍을 이뤄줌
 
-p_result = p_plus(2, 3)
-r_result = r_plus(2, 4)
+def introduction(name,age):
+  return f"Hello I'm {name}, {age} years old"
 
-print("p_result =",p_result,"r_result =", r_result)
+#string 안에 인자 값을 넣어주기 위해서 string 앞에 format을 뜻하는 f를 적어준 뒤, string안에 인자가 들어갈 자리에 {인자이름} 기입
 
-#p_plus 함수에서 아무것도 return하지 않아서 
-#print(p_plus)가 None으로 출력됨
-#program은 print를 신경쓰지 X, print로 나타낸 값을 쓸 수 X
-# -> print(~~) = None
+hi_every1 = introduction("moon","31")
+print(hi_every1)
 
+def introduce(name,age,are_from,fav_song):
+  return f"Hello I'm {name}, {age} years old, I'm from {are_from}, and I love {fav_song}"
 
+#이렇게 인자 값을 많을 때, keyword argument를 사용하는게 유용
+
+hey = introduce( age="30", are_from="seoul", fav_song="george's boat", name="moonzero")
+print(hey)

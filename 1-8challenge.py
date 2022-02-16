@@ -25,3 +25,14 @@ remove_x(days, "Mon")
 print(days)
 
 #https://replit.com/@mooonzero/Day-Two-Blueprint#main.py
+# def is_on_list(a_list=[], word=""):
+#   return word in a_list
+
+# def get_x(a_list=[], index=0):
+#   return a_list[index]
+
+# def add_x(a_list=[], word=""):
+#   a_list.append(word)
+
+# def remove_x(a_list=[], word=""):
+#   a_list.remove(word)

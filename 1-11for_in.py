@@ -16,4 +16,6 @@ for letter in "moonyeong":
 	print(letter)
 
 # day, x 와 같은 for문 안의 변수가 만들어지는건 for문이 실행되는 순간
-#nico 따라서 if day is "Wed":
+
+#nico 따라서 if day is "Wed":로 작성했더니 is에서 밑줄 뜨고 
+#run했을 때 "Did you mean "=="? if day is "Wed":" 문장 뜸

@@ -1,4 +1,4 @@
-#2-05_Requesting_Each_Page
+#2-06_Extracting_Titles
 # import requests
 # from bs4 import BeautifulSoup
 # ==> indeed.py를 import 하니까 requests나 bs4는 따로 import 안해줘도 된다니 .. 신기

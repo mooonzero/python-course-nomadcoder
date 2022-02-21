@@ -1,8 +1,8 @@
 #2-06_Extracting_Titles
 import requests
 from bs4 import BeautifulSoup
-LIMIT = 50
-URL = f"https://www.indeed.com/jobs?q=python&limit={LIMIT}"
+LIMIT = 10
+URL = f"https://kr.indeed.com/jobs?q=python&limit={LIMIT}"
 #main.py에서 작성했던 indeed의 페이지를 추출하는 코드들을 하나의 함수로 만들어줌
 
 def extract_indeed_pages():
@@ -28,8 +28,15 @@ def extract_indeed_jobs(last_page):
 		for result in results:
 			#title =result.find("h2",{"class":"jobTitle"})
 			#anchor = title.find("span")["title"] 로 했을땐 오류 발생
-			actual_title = result.find("span",title = True).string
-			print(actual_title)
-			#jobTitle안의 span title을 가져와야함
+			title = result.find("span",title = True).string
+			company = result.find("span",{"class":"companyName"})
+			company_anchor =  company.find("a")
+			if company_anchor is not None:
+				company = company_anchor.string
+			else:
+				company = company.string
+
+			print(title, company)
+			#그냥 처음부터 company 끝에 string 붙이고 if문만 작성하고픔
 		return jobs
 		#jobs는 다음 시간에 

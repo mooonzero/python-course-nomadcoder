@@ -35,7 +35,6 @@ def extract_indeed_jobs(last_page):
 				company = company_anchor.string
 			else:
 				company = company.string
-
 			print(title, company)
 			#그냥 처음부터 company 끝에 string 붙이고 if문만 작성하고픔
 		return jobs

@@ -8,6 +8,8 @@ last_indeed_page = extract_indeed_pages()
 
 indeed_jobs = extract_indeed_jobs(last_indeed_page)
 
+print(indeed_jobs)
+
 #print(max_indeed_page)
 
 # range(max_page)

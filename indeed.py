@@ -5,7 +5,7 @@ LIMIT = 10
 URL = f"https://kr.indeed.com/jobs?q=python&limit={LIMIT}"
 #main.py에서 작성했던 indeed의 페이지를 추출하는 코드들을 하나의 함수로 만들어줌
 
-def extract_indeed_pages():
+def get_last_page():
    result = requests.get(URL)
    soup = BeautifulSoup(result.text,'html.parser')
    pagination = soup.find("div",{"class":"pagination"})
@@ -33,7 +33,7 @@ def extract_job(html):
 	return {'title':title,'company': company,'location':location,'link': f"https://kr.indeed.com/viewjob?jk={job_id}&from=web&vjs=3"}
 
 
-def extract_indeed_jobs(last_page):
+def extract_jobs(last_page):
 
 	jobs = []
 	for page in range(last_page):
@@ -45,5 +45,12 @@ def extract_indeed_jobs(last_page):
 		for result in results:
 			job = extract_job(result)
 			jobs.append(job)
+	return jobs
+
+
+# 2-08에서 main에 있는 코드를 indeed.py로 옮겨와 하나의 함수로 작성
+def get_jobs():
+	last_page = get_last_page()
+	jobs = extract_jobs(last_page)
 	return jobs
 		

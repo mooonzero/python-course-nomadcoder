@@ -2,13 +2,15 @@
 # import requests
 # from bs4 import BeautifulSoup
 # ==> indeed.py를 import 하니까 requests나 bs4는 따로 import 안해줘도 된다니 .. 신기
-from indeed import extract_indeed_pages, extract_indeed_jobs
+from indeed import get_jobs as get_indeed_jobs
 
-last_indeed_page = extract_indeed_pages()
-
-indeed_jobs = extract_indeed_jobs(last_indeed_page)
+indeed_jobs = get_indeed_jobs()
 
 print(indeed_jobs)
+
+
+
+
 
 #print(max_indeed_page)
 

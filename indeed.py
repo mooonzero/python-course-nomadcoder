@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 LIMIT = 10
 URL = f"https://kr.indeed.com/jobs?q=python&limit={LIMIT}"
-#main.py에서 작성했던 indeed의 페이지를 추출하는 코드들을 하나의 함수로 만들어줌
 
 def get_last_page():
    result = requests.get(URL)
@@ -21,13 +20,13 @@ def get_last_page():
 def extract_job(html):
 	title = html.find("span",title = True).string
 	company = html.find("span",{"class":"companyName"})
-	company_anchor =  company.find("a")
-	if company_anchor is not None:
-		company = company_anchor.string
-	else:
-		company = company.string
+	if company is not None:
+		company_anchor =  company.find("a")
+		if company_anchor is not None:
+			company = company_anchor.string
+		else:
+			company = company.string
 	location = html.find("div",{"class":"companyLocation"}).string
-	#location = html.select_one("pre>div").text
 	job_id = html.parent['data-jk']
 	#print(location)
 	return {'title':title,'company': company,'location':location,'link': f"https://kr.indeed.com/viewjob?jk={job_id}&from=web&vjs=3"}

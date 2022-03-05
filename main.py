@@ -1,4 +1,4 @@
-#2-06_Extracting_Titles
+#2- csv란?
 from indeed import get_jobs as get_indeed_jobs
 from so import get_jobs as get_so_jobs
 

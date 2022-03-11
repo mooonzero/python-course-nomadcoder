@@ -36,7 +36,6 @@ def extract_jobs(last_page):
 
 	jobs = []
 	for page in range(last_page):
-		print(f"******Scrapping page {page}******")
 		result = requests.get(f"{URL}&start={page*LIMIT}")
 		soup = BeautifulSoup(result.text,'html.parser')
 		#구직 정보가 담겨있는 div의 class 명으로 찾아줌

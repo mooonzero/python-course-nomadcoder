@@ -1,13 +1,18 @@
-#2- csv란?
-from indeed import get_jobs as get_indeed_jobs
-from so import get_jobs as get_so_jobs
-from save import save_to_file
+# def plus(a, b, *args, **kwargs):
+# 	print(args)
+# 	print(kwargs)
+# 	return a + b
+# #*args : for positional arguments
+# #**kwargs : for keyword arguments 
+# 	#keyword arguments : somethg = 'hey'처럼 keyword가 설정된것
+# 	# kwargs는 dict형으로 출력? 생성? 됨
 
+# plus(1,1,1,1,1,1,2,4,5,2,moon =True, zero = True, hungry = True, beer = True)
 
-indeed_jobs = get_indeed_jobs()
-so_jobs = get_so_jobs()
-jobs =  indeed_jobs + so_jobs
-save_to_file(jobs)
-#print(jobs)
+def plus(*args):
+	result = 0
+	for number in args:
+		result += number
+	print(result)
 
-#csv comma separated value
+plus(1,1,1,1,1,1,2,4,5,2,5,4)

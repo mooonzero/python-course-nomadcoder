@@ -5,12 +5,13 @@ class Car():
 	seats = 4
 
 
-porche = Car()
-porche.color = "Blue"
+	def start(self):
+		print(self.doors)
+		print("I started")
 
-#class = 설계도 
-#porche = instance of class
+#method : function in class
 
-ferrari = Car()
-ferrari.color = "Yellow"
-print(porche.color)
+zero = Car()
+zero.start()
+#모든 method의 첫번째 arguments는 그 method를 호출한 instance
+#zero.start(zero)

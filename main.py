@@ -5,13 +5,5 @@ class Car():
 	seats = 4
 
 
-	def start(self):
-		print(self.doors)
-		print("I started")
-
-#method : function in class
-
-zero = Car()
-zero.start()
-#모든 method의 첫번째 arguments는 그 method를 호출한 instance
-#zero.start(zero)
+print(dir(Car))
+#dir : class 안에 있는 모든 것을 보여줌

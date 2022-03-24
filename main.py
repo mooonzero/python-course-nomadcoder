@@ -6,4 +6,4 @@ class Car():
 
 
 print(dir(Car))
-#dir : class 안에 있는 모든 것을 보여줌
+#dir() : 해당 객체가 가지고 있는 변수와 method를 보여줌
